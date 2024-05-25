@@ -141,8 +141,7 @@
                         <label>State</label>
                         <select class="custom-select" th:field="*{address.state}">
                             <option th:value="''" selected>Select a State</option>
-                            <option th:each="theState:${states}" th:value="${theState}"
-                                    th:text="${theState+' - '+theState.abbreviation}"></option>
+                            <option th:each="state : ${states}" th:value="${state}" th:text="${state}"></option>
                         </select>
                         <div class="text-danger" th:if="${#fields.hasErrors('address.state')}">
                             <ul>
